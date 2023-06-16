@@ -1,31 +1,93 @@
 <!DOCTYPE html>
-<html>
-<title>My Online Resume</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page ko na to</title>
+    <link rel="stylesheet" href="style.css">  
+	<script src="https://kit.fontawesome.com/f34ada4875.js" crossorigin="anonymous"></script>
+</head>
 <body>
-<body style="background-color:lavenderblush;">
-<h1>Alimagno, Van Carlo P.</h1>
-<img src="picture.jpg" width="250" height="250" style="border:5px black">
-<h1>Summary</h1>
-<p>Seeking a position with a leading organization that will lead to a longterm career relationship. </p>
-<hr>
-<h1>Education</h1>
-<ul style="Education-style-type circle">
-<li>Bachelor of Science and Information Technology - Pamantasan ng Lungsod ng San Pablo (2021-2023) </li>
-</ul>
-<hr>
-<h1>Work Experience</h1>
-<ul style="Work Experience-style-type circle">
-<h2><li>Customer Service Representative - ABC Inc.</li></h2>
-    <p>June 2014 - May 2018</p>
-<li>Resolved customer complaints and issues</li>
-<li>Maintained customer records and updated account information</li>
-</ul>
-<ul>
-<h2><li>Customer Service Representative - ABC Inc.</li></h2>
-    <p>June 2018 - Present</p>
-<li>Assisted with scheduling appointments and meetings</li>
-<li>Managed incoming and outgoing mail and correspondence</li>
-<li>Prepared reports and presentations using Microsoft Office Suite</li>
-</ul>
+<div id="header">
+     <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+				<i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+			<i class="fas fa-bars" onclick="openmenu()"></i>
+         </nav> 
+		 <div class="header-text">
+			 <h1>HI, I'M <span>VAN CARLO</span><br>FROM SAN PABLO CITY</h1>
+		 </div>
+    </div>
+</div>
+<!-- -----------about----------- -->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="about-col-1">
+				<img src="background.jpg">
+			</div>
+			<div class="about-col-2">
+				<h1 class="sub-title">About Me</h1>
+				<p>Hello, I'm Van Carlo P. Alimagno a Second year College Student From Pamantasan ng Lungsod ng San Pablo. Im taking Bachelor of Science in Information Technology in the Major of Web and Game Development.</p>
+				<a href="Resume/index.html" class="btn-box">More About Me</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ----------contact----------- -->
+	
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+				<h1 class="sub-title">Contact Me</h1>
+				<p><i class="fas fa-phone-square-alt"></i> 09123456789</p>
+				<p><i class="fas fa-paper-plane"></i> vanalimagno1102@gmail.com</p>
+				<a href="https://www.facebook.com/van.alimagno.54"><p><i class="fab fa-facebook"></i> Van Carlo P. Aliamagno</p></a>
+				</div>
+		</div>
+			<div class="copyright">
+		<p>Copyright © Van Carlo P. Alimagno 2023</p>
+			</div>
+	</div>
+</div>
+	
+<script>
+	
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+	
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+
+</script>
+	
+<script>
+	
+	var sidemenu = document.getElementById("sidemenu");
+	
+	function openmenu(){
+		sidemenu.style.right = "0";
+	}
+	function closemenu(){
+		sidemenu.style.right = "-200px";
+	}
+	
+</script>
+
 </body>
 </html>
